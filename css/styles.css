@@ -1,26 +1,195 @@
 /* Color Palette
-# - color 1
-# - color 2
-# - color 3
-# - color 4
+#ded8cc
+#303952
+#ac7a49
+#9c453e
 */
 
-/* Global styles 
+/* Global styles
 ------------------------------------*/
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
 body {
-    /*background: lightblue;*/
+    margin: 0;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    padding: 24px;
+    background-color: #ded8cc;
+}
+
+.page {
+    width: min(900px, 100%);
+}
+
+.u { text-decoration: underline; }
+.i { font-style: italic; }
+
+section h1,
+section h2,
+section h3,
+section p,
+section ul,
+section li {
+    margin: 0.3rem 0;
 }
 
 
-/* Header & Footer 
+/* Header
 ------------------------------------*/
+.header {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 1.5rem;
+    padding: 2rem;
 
+    /* Color-code this section: */
+    background-color: #303952;
+    color: #ffffff;
+}
+
+.header img {
+    width: 110px;
+    height: 110px;
+    border-radius: 50%;
+    object-fit: cover;
+    flex-shrink: 0;
+}
+
+.header-info {
+    display: flex;
+    flex-direction: column;
+    gap: 0.4rem;
+    text-align: left;
+}
+
+.header-info h1, footer {
+    font-size: 1.8rem;
+    font-family: 'Germania One', serif;
+    font-weight: 800;
+}
+.header-info h2 {
+    font-size: 1rem;
+    font-family: 'Balthazar', serif;
+    font-weight: 700;
+}
+h3, h2 {
+    font-size: 1rem;
+    font-weight: 400;
+    font-family: 'Grenze', serif;
+}
+.header-info p  {
+    font-size: 0.9rem;
+    opacity: 0.85;
+    font-family: 'Balthazar', serif;
+}
+main p {
+    font-family: 'Balthazar', serif;
+}
+
+
+/* Shared CSS
+------------------------------------*/
+.work-experience,
+.education-experience {
+    display: flex;
+    flex-direction: row;
+    padding: 1.5rem 2rem;
+    gap: 1.5rem;
+}
+
+.section-label {
+    width: 160px;
+    flex-shrink: 0;
+    text-align: right;
+    padding-top: 0.2rem;
+}
+
+.section-label h2 {
+    font-size: 1rem;
+}
+
+.section-content {
+    flex: 1;
+    border-left: 2px solid rgba(0, 0, 0, 0.12);
+    padding-left: 1.5rem;
+    display: flex;
+    flex-direction: column;
+    gap: 1.2rem;
+}
 
 
 /* Work Experience
 ------------------------------------*/
+.work-experience {
+    /* Color-code this section: */
+    background-color: #ac7a49;
+}
 
+.work h3   { font-size: 1rem; }
+.work p    { font-size: 0.88rem; margin: 0.15rem 0; }
+.work ul   { padding-left: 1.2rem; margin-top: 0.3rem; }
+.work li   { font-size: 0.87rem; line-height: 1.5; }
 
 
 /* Education
 ------------------------------------*/
+.education-experience {
+    /* Color-code this section: */
+    background-color: #9c453e;
+}
+
+.education h3  { font-size: 1rem; }
+.education p   { font-size: 0.88rem; margin: 0.15rem 0; }
+
+
+/* Footer
+------------------------------------*/
+.footer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0.8rem;
+    padding: 2rem;
+    text-align: center;
+
+    background-color: #303952;
+    color: #ffffff;
+}
+
+.footer h2 {
+    font-size: 1rem;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+}
+
+.footer-links {
+    display: flex;
+    flex-direction: row;
+    gap: 1.5rem;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.footer-links a {
+    color: #ffffff;
+    text-decoration: none;
+    font-size: 0.9rem;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.4);
+    padding-bottom: 2px;
+    transition: opacity 0.2s;
+}
+
+.footer-links a:hover {
+    opacity: 0.7;
+}
+
+.footer p {
+    font-size: 0.75rem;
+    opacity: 0.6;
+}
